@@ -82,8 +82,7 @@ class EasternPalace extends Region
 
         $this->locations["Eastern Palace - Boss"]->setRequirements(function ($locations, $items) {
             return $items->canShootArrows()
-                && ($items->has('Lamp', $this->world->config('item.require.Lamp', 1))
-                    || ($this->world->config('itemPlacement') === 'advanced' && $items->has('FireRod')))
+                && ($items->has('Lamp', $this->world->config('item.require.Lamp', 1)))
                 && $items->has('BigKeyP1')
                 && $this->boss->canBeat($items, $locations)
                 && (!$this->world->config('region.wildCompasses', false) || $items->has('CompassP1') || $this->locations["Eastern Palace - Boss"]->hasItem(Item::get('CompassP1', $this->world)))
