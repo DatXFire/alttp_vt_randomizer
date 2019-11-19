@@ -34,8 +34,7 @@ class HyruleCastleEscape extends Region\Standard\HyruleCastleEscape
         });
 
         $this->locations["Sewers - Dark Cross"]->setRequirements(function ($locations, $items) {
-            return $items->has('Lamp', $this->world->config('item.require.Lamp', 1))
-                || ($this->world->config('itemPlacement') === 'advanced' && $items->has('FireRod'));
+            return $items->has('Lamp', $this->world->config('item.require.Lamp', 1));
         });
 
         $this->locations["Hyrule Castle - Boomerang Chest"]->setRequirements(function ($locations, $items) {

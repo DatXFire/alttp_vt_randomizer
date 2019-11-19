@@ -125,14 +125,12 @@ class PalaceOfDarkness extends Region
         });
 
         $this->locations["Palace of Darkness - Dark Basement - Left"]->setRequirements(function ($locations, $items) {
-            return ($items->has('Lamp', $this->world->config('item.require.Lamp', 1))
-                || ($this->world->config('itemPlacement') === 'advanced' && $items->has('FireRod')))
+            return ($items->has('Lamp', $this->world->config('item.require.Lamp', 1)))
                 && ((($items->has('Hammer') && $items->canShootArrows() && $items->has('Lamp', $this->world->config('item.require.Lamp', 1))) || $this->world->config('region.wildKeys', false)) ? $items->has('KeyD1', 4) : $items->has('KeyD1', 3));
         });
 
         $this->locations["Palace of Darkness - Dark Basement - Right"]->setRequirements(function ($locations, $items) {
-            return ($items->has('Lamp', $this->world->config('item.require.Lamp', 1))
-                || ($this->world->config('itemPlacement') === 'advanced' && $items->has('FireRod')))
+            return ($items->has('Lamp', $this->world->config('item.require.Lamp', 1)))
                 && ((($items->has('Hammer') && $items->canShootArrows() && $items->has('Lamp', $this->world->config('item.require.Lamp', 1))) || $this->world->config('region.wildKeys', false)) ? $items->has('KeyD1', 4) : $items->has('KeyD1', 3));
         });
 
